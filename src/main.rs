@@ -1,3 +1,8 @@
+#[macro_use] extern crate diesel;
+#[macro_use] extern crate log;
+
+mod models;
+mod schema;
 mod state;
 mod web;
 
@@ -8,6 +13,7 @@ type PgPool = Pool<AsyncPgConnection>;
 
 #[tokio::main]
 async fn main() {
+    pretty_env_logger::init();
     dotenvy::dotenv()
         .expect("Failed to load .env");
     let database_url = std::env::var("DATABASE_URL")

@@ -2,7 +2,7 @@ use crate::PgPool;
 
 #[derive(Clone)]
 pub struct State {
-    pool: PgPool,
+    pub pool: PgPool,
 }
 
 impl State {

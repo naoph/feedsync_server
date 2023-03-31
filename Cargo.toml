@@ -7,8 +7,11 @@ edition = "2021"
 
 [dependencies]
 actix-web = "4.3.1"
+bcrypt = "0.14.0"
 diesel = { version = "2.0.3", features = ["postgres"] }
 diesel-async = { version = "0.2.1", features = ["mobc", "postgres"] }
 dotenvy = "0.15.7"
+log = "0.4.17"
+pretty_env_logger = "0.4.0"
 serde = { version = "1.0.159", features = ["derive"] }
 tokio = { version = "1.27.0", features = ["full"] }
